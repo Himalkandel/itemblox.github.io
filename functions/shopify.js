@@ -8,7 +8,7 @@ exports.handler = async function(event, context) {
     const shopifyStoreUrl = '934b7b-2c.myshopify.com'; // Correct Shopify store URL
 
     // Fetch the order details from Shopify
-    const orderResponse = await fetch(`https://${shopifyStoreUrl}/admin/api/2023-01/orders.json?name=${orderId}`, {
+    const orderResponse = await fetch(`https://${shopifyStoreUrl}/admin/api/2023-01/orders.json?status=any&name=${orderId}`, {
       method: 'GET',
       headers: {
         'X-Shopify-Access-Token': shopifyApiToken,

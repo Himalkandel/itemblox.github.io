@@ -5,7 +5,7 @@ exports.handler = async function(event, context) {
     const { email, orderId } = JSON.parse(event.body);
 
     const shopifyApiToken = process.env.SHOPIFY_API_TOKEN; // Use the environment variable
-    const shopifyStoreUrl = 'itemblox.com';
+    const shopifyStoreUrl = '934b7b-2c.myshopify.com'; // Correct Shopify store URL
 
     // Fetch the order details from Shopify
     const orderResponse = await fetch(`https://${shopifyStoreUrl}/admin/api/2023-01/orders/${orderId}.json`, {

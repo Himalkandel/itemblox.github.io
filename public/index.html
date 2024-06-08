@@ -37,13 +37,13 @@
     </style>
 </head>
 <body>
-    <h1>Verify Your Orderss</h1>
+    <h1>Verify Your Order</h1>
     <form id="orderForm">
         <label for="email">Enter Email:</label>
         <input type="email" id="email" name="email" required>
         
         <label for="orderId">Enter Order Number:</label>
-        <input type="text" id="orderId" name="orderId" required>
+        <input type="text" id="orderId" name="orderId" pattern="\d{4}" title="Please enter a 4-digit order number" required>
         
         <button type="submit">Verify Order</button>
     </form>
@@ -71,7 +71,7 @@
                 if (data.success) {
                     document.getElementById('orderStatus').innerText = `Order verified! Status: ${data.message}`;
                 } else {
-                    document.getElementById('orderStatus').innerText = `Order not found or email does not match. Error: ${data.details}`;
+                    document.getElementById('orderStatus').innerText = `Error: ${data.error}. Details: ${data.details}`;
                 }
             } catch (error) {
                 document.getElementById('orderStatus').innerText = `Error verifying order: ${error.message}`;

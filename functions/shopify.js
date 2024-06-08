@@ -8,7 +8,7 @@ exports.handler = async function(event, context) {
     const shopifyStoreUrl = '934b7b-2c.myshopify.com'; // Correct Shopify store URL
 
     // Fetch the order details from Shopify
-    const orderResponse = await fetch(`https://${shopifyStoreUrl}/admin/api/2023-01/orders/${orderId}.json`, {
+    const orderResponse = await fetch(`https://${shopifyStoreUrl}/admin/api/2023-01/orders.json?name=${orderId}`, {
       method: 'GET',
       headers: {
         'X-Shopify-Access-Token': shopifyApiToken,
@@ -20,10 +20,15 @@ exports.handler = async function(event, context) {
       throw new Error(`Failed to fetch order details: ${orderResponse.statusText}`);
     }
 
-    const orderData = await orderResponse.json();
+    const ordersData = await orderResponse.json();
+    const order = ordersData.orders.find(order => order.name.endsWith(`#${orderId}`));
+
+    if (!order) {
+      throw new Error('Order not found.');
+    }
 
     // Validate the email
-    if (orderData.order.email !== email) {
+    if (order.email !== email) {
       return {
         statusCode: 400,
         body: JSON.stringify({ success: false, error: 'Email does not match the order.' })

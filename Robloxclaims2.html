@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MM2Shotz Claims - Step 3</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 70%;
+        margin: 30px auto;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .header {
+        text-align: center;
+        padding: 20px;
+    }
+    .steps {
+        text-align: center;
+        font-size: 16px;
+        color: #333;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .step-dot {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        border-radius: 50%;
+        background-color: #ccc;
+        color: white;
+        text-align: center;
+    }
+    .active-step {
+        background-color: #007bff;
+    }
+    .steps-line {
+        display: inline-block;
+        width: 20%;
+        height: 3px;
+        background-color: #ccc;
+        vertical-align: middle;
+    }
+    .options, .friend-request {
+        text-align: center;
+        margin: 20px 0;
+    }
+    a.button, .button {
+        padding: 10px;
+        margin-top: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .button:hover {
+        background-color: #0056b3;
+    }
+</style>
+<script>
+window.onload = function() {
+    const orderId = localStorage.getItem("orderId");
+    const robloxUsername = localStorage.getItem("robloxUsername");
+    if (!orderId || !robloxUsername) {
+        alert("Missing information. Redirecting to start.");
+        window.location.href = "index.html";
+    }
+    document.getElementById("orderIdDisplay").textContent = "Order ID: " + orderId;
+    document.getElementById("robloxUsernameDisplay").textContent = "Roblox Username: " + robloxUsername;
+};
+function goToNextStep() {
+    window.location.href = "Robloxclaims3.html"; 
+}
+</script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h2>Step 3: Finalize Your Claim</h2>
+        <p>Please confirm the details and follow the instructions below.</p>
+    </div>
+    <div class="steps">
+        <span class="step-dot">1</span>
+        <span class="steps-line"></span>
+        <span class="step-dot">2</span>
+        <span class="steps-line"></span>
+        <span class="step-dot active-step">3</span>
+        <span class="steps-line"></span>
+        <span class="step-dot">4</span>
+    </div>
+    <div class="options">
+        <p>Your Order ID: <span id="orderIdDisplay"></span></p>
+        <p>Your Roblox Username: <span id="robloxUsernameDisplay"></span></p>
+    </div>
+    <div class="friend-request">
+        <p>Send a friend request to our account:</p>
+        <a href="https://www.roblox.com/users/6009227889/profile" target="_blank" class="button">Send Friend Request</a>
+        <button onclick="goToNextStep()" class="button">I sent a friend request</button>
+    </div>
+</div>
+</body>
+</html>

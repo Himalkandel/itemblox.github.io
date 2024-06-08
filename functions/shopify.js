@@ -27,6 +27,9 @@ exports.handler = async function(event, context) {
       throw new Error('Order not found.');
     }
 
+    console.log(`Fetched email from order: ${order.email}`);
+    console.log(`Provided email: ${email}`);
+
     // Validate the email
     if (order.email !== email) {
       return {

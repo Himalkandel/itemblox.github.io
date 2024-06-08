@@ -21,6 +21,8 @@ exports.handler = async function(event, context) {
     }
 
     const ordersData = await orderResponse.json();
+    console.log('Orders Data:', JSON.stringify(ordersData, null, 2)); // Log the entire orders data
+
     const order = ordersData.orders.find(order => order.name.endsWith(`#${orderId}`));
 
     if (!order) {
@@ -34,7 +36,7 @@ exports.handler = async function(event, context) {
     if (order.email !== email) {
       return {
         statusCode: 400,
-        body: JSON.stringify({ success: false, error: 'Email does not match the order.' })
+        body: JSON.stringify({ success: false, error: 'Email does not match the order.', details: `Fetched email: ${order.email}` })
       };
     }
 

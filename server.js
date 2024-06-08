@@ -8,6 +8,11 @@ app.use(express.json());
 const SHOPIFY_API_TOKEN = process.env.SHOPIFY_API_TOKEN;
 const SHOPIFY_STORE_URL = process.env.SHOPIFY_STORE_URL;
 
+// Route to handle the root URL
+app.get('/', (req, res) => {
+    res.send('Welcome to the Itemblox Order Checker API');
+});
+
 app.post('/check-order', async (req, res) => {
     const { orderId } = req.body;
 

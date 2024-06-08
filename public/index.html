@@ -69,12 +69,12 @@
 
                 const data = await response.json();
                 if (data.success) {
-                    document.getElementById('orderStatus').innerText = `Order verified! Status: ${data.orderStatus}`;
+                    document.getElementById('orderStatus').innerText = `Order verified! Status: ${data.message}`;
                 } else {
-                    document.getElementById('orderStatus').innerText = 'Order not found or email does not match.';
+                    document.getElementById('orderStatus').innerText = `Order not found or email does not match. Error: ${data.details}`;
                 }
             } catch (error) {
-                document.getElementById('orderStatus').innerText = 'Error verifying order.';
+                document.getElementById('orderStatus').innerText = `Error verifying order: ${error.message}`;
                 console.error('Error:', error);
             }
         }

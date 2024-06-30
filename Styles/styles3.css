@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f0f0;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    padding: 10px; /* Adjusted padding */
+}
+
+.content-wrapper {
+    width: 35%;
+    height: 80%; /* Adjusted height */
+    margin: 0 auto;
+    padding: 15px; /* Adjusted padding */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px; /* Adjusted margin */
+}
+
+header img {
+    width: 150px;
+}
+
+.stepper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Adjusted margin */
+    list-style: none;
+    padding: 0;
+}
+
+.stepper .step {
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.stepper .step.active,
+.stepper .step.completed {
+    background-color: #007bff;
+    color: white;
+}
+
+main {
+    text-align: center;
+    width: 100%;
+    margin-top: -10px; /* Adjusted margin */
+}
+
+main h1 {
+    font-size: 28px; /* Adjusted font size */
+}
+
+main p {
+    color: #777;
+    font-size: 16px; /* Adjusted font size */
+}
+
+.bot-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Adjusted margin */
+}
+
+.bot-info img {
+    width: 100px; /* Adjusted size */
+    height: 100px; /* Adjusted size */
+    border-radius: 50%;
+    margin-right: 10px; /* Adjusted margin */
+}
+
+.bot-details {
+    text-align: left;
+}
+
+.bot-details h2 {
+    font-size: 20px; /* Adjusted font size */
+    margin: 0;
+}
+
+.bot-details p {
+    font-size: 14px; /* Adjusted font size */
+    color: #777;
+}
+
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Adjusted padding */
+    margin-top: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px; /* Adjusted font size */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.go-back-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.go-back-button:hover {
+    background-color: #0056b3;
+}
+
+.tutorial-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.tutorial-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .content-wrapper {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+
+    main h1 {
+        font-size: 20px;
+    }
+
+    main p {
+        font-size: 12px;
+    }
+
+    .bot-info {
+        flex-direction: column;
+    }
+
+    .bot-info img {
+        margin-bottom: 10px;
+    }
+
+    .button {
+        padding: 8px;
+    }
+}

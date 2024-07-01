@@ -27,8 +27,8 @@ body, html {
 }
 
 .content-wrapper {
-    width: 90%;
-    max-width: 600px;
+    width: 35%;
+    height: 90%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -85,9 +85,9 @@ main p {
     margin-bottom: 20px;
 }
 
-#discord-icon {
-    width: 40%;
-    max-width: 150px;
+.discord-icon {
+    font-size: 80px; /* Adjust the size of the icon here */
+    color: #5865F2; /* Discord blue */
     margin-bottom: 20px;
 }
 
@@ -148,8 +148,8 @@ footer a:hover {
         font-size: 12px;
     }
 
-    #discord-icon {
-        width: 80px;
+    .discord-icon {
+        font-size: 60px;
     }
 
     .button {

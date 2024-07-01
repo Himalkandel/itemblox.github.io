@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itemblox Claim</title>
+    <link rel="stylesheet" href="../Styles/styles1.css">
+</head>
+
+<body>
+    <div id="popup-container" class="popup-container">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Claim Your Order</h2>
+                <p>Please enter your order number and the email you used. Your order number can be found in the email receipt.</p>
+            </div>
+            <div class="modal-body">
+                <label for="order-number">Enter Your Order Number</label>
+                <input type="number" id="order-number" placeholder="XXXX" min="4" required>
+                <label for="email">Enter Your Used Email</label>
+                <input type="email" id="email" placeholder="Admin@itemblox.com" required>
+                <button id="continue-button">Continue</button>
+            </div>
+        </div>
+    </div>
+    <div id="main-content" class="main-content hidden">
+        <div class="content-wrapper">
+            <header>
+                <img src="../images/itemblox.png" alt="MM2Best Logo">
+                <nav>
+                    <ol class="stepper">
+                        <li class="step active">1. Find your roblox account</li>
+                        <li class="step">2</li>
+                        <li class="step">3</li>
+                        <li class="step">4</li>
+                    </ol>
+                </nav>
+            </header>
+            <main>
+                <h1>Hello!</h1>
+                <p>Let's Get your Roblox to start the claiming process.</p>
+                <label for="roblox-username">Please Enter Your Roblox Username</label>
+                <input type="text" id="roblox-username" placeholder="MyUser12" required>
+                <button id="start-button">Continue</button>
+            </main>
+            <footer>
+                <a href="https://www.youtube.com/watch?v=jy4Ksg6gKVA" target="_blank">Tutorial</a>
+            </footer>
+        </div>
+    </div>
+    <script src="../scripts/scripts.js"></script>
+</body>
+
+</html>

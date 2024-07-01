@@ -81,6 +81,34 @@ main p {
     margin-bottom: 20px;
 }
 
+.bot-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bot-info img {
+    width: 100px; /* Adjusted width */
+    height: 100px; /* Adjusted height */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.bot-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bot-details h2 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+.bot-details p {
+    font-size: 14px;
+    color: #777;
+}
+
 .button-container {
     display: flex;
     justify-content: center;
@@ -97,6 +125,7 @@ main p {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    margin-top: 10px;
 }
 
 .button:hover {
@@ -135,6 +164,19 @@ footer a:hover {
     }
 
     main p {
+        font-size: 12px;
+    }
+
+    .bot-info img {
+        width: 80px; /* Adjusted width for mobile */
+        height: 80px; /* Adjusted height for mobile */
+    }
+
+    .bot-details h2 {
+        font-size: 18px;
+    }
+
+    .bot-details p {
         font-size: 12px;
     }
 

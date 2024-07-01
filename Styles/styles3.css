@@ -11,10 +11,6 @@ body, html {
     background-color: #f0f0f0;
 }
 
-.hidden {
-    display: none;
-}
-
 .main-content {
     display: flex;
     flex-direction: column;
@@ -27,8 +23,8 @@ body, html {
 }
 
 .content-wrapper {
-    width: 90%;
-    max-width: 600px;
+    width: 35%;
+    height: 90%;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -87,31 +83,37 @@ main p {
 
 .bot-info {
     display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.bot-info img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
-.bot-details {
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.bot-info img {
+    width: 100px; /* Adjusted width */
+    height: 100px; /* Adjusted height */
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.bot-details {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .bot-details h2 {
-    margin: 5px 0;
     font-size: 20px;
+    margin: 10px 0 5px;
 }
 
 .bot-details p {
-    margin: 0;
-    color: #777;
     font-size: 14px;
+    color: #777;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 .button {
@@ -166,8 +168,8 @@ footer a:hover {
     }
 
     .bot-info img {
-        width: 30px;
-        height: 30px;
+        width: 80px; /* Adjusted width for mobile */
+        height: 80px; /* Adjusted height for mobile */
     }
 
     .bot-details h2 {

@@ -93,4 +93,64 @@ main p {
 
 .button {
     background-color: #007bff;
-    color:
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .content-wrapper {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+
+    main h1 {
+        font-size: 20px;
+    }
+
+    main p {
+        font-size: 12px;
+    }
+
+    .button {
+        padding: 8px;
+    }
+
+    footer a {
+        padding: 8px;
+    }
+
+    header img {
+        width: 80%;
+    }
+}

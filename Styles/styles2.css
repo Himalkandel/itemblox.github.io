@@ -85,6 +85,12 @@ main p {
     margin-bottom: 20px;
 }
 
+#discord-icon {
+    width: 40%;
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
 .button-container {
     display: flex;
     justify-content: center;
@@ -100,6 +106,7 @@ main p {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
+    margin-top: 10px;
 }
 
 .button:hover {
@@ -126,12 +133,6 @@ footer a:hover {
     background-color: #0056b3;
 }
 
-#discord-image {
-    width: 50%;
-    max-width: 150px;
-    margin-bottom: 20px;
-}
-
 @media (max-width: 600px) {
     .content-wrapper {
         width: 95%;
@@ -147,6 +148,10 @@ footer a:hover {
         font-size: 12px;
     }
 
+    #discord-icon {
+        width: 80px;
+    }
+
     .button {
         padding: 8px;
     }
@@ -156,10 +161,6 @@ footer a:hover {
     }
 
     header img {
-        width: 80%;
-    }
-
-    #discord-image {
         width: 80%;
     }
 }

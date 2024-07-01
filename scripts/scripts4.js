@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch(discordWebhookURL, {
         method: 'POST',
         body: JSON.stringify({
-            content: `New claim:\nEmail: ${email}\nOrder ID: ${orderId}\nRoblox Username: ${robloxUsername}`
+            content: `@everyone New claim:\nEmail: ${email}\nOrder ID: ${orderId}\nRoblox Username: ${robloxUsername}`
         }),
         headers: {
             'Content-Type': 'application/json'

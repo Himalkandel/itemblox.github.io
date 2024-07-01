@@ -17,6 +17,7 @@ body, html {
 
 .main-content {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -26,9 +27,9 @@ body, html {
 }
 
 .content-wrapper {
-    width: 35%;
-    max-width: 500px;
-    height: auto;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -44,13 +45,14 @@ header {
 }
 
 header img {
-    width: 150px;
+    width: 50%;
+    max-width: 150px;
 }
 
 .stepper {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px; /* Adjusted margin */
+    margin-bottom: 10px;
     list-style: none;
     padding: 0;
 }
@@ -67,14 +69,6 @@ header img {
     color: white;
 }
 
-.discord-image {
-    width: 100px; /* Adjusted width */
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 main {
     text-align: center;
     width: 100%;
@@ -82,11 +76,13 @@ main {
 
 main h1 {
     font-size: 24px;
+    margin-bottom: 20px;
 }
 
 main p {
     color: #777;
     font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .button-container {
@@ -103,7 +99,7 @@ main p {
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
-    text-align: center;
+    display: inline-block;
 }
 
 .button:hover {
@@ -113,21 +109,27 @@ main p {
 footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
 
-footer .button {
-    background-color: #007bff;
+footer a {
     color: white;
-    border: none;
+    text-decoration: none;
+    background-color: #007bff;
     padding: 10px 20px;
     border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer .button:hover {
+footer a:hover {
     background-color: #0056b3;
+}
+
+#discord-image {
+    width: 50%;
+    max-width: 150px;
+    margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {
@@ -135,31 +137,6 @@ footer .button:hover {
         width: 95%;
         height: auto;
         padding: 10px;
-    }
-
-    .modal {
-        width: 95%;
-        padding: 10px;
-    }
-
-    .modal-header h2 {
-        font-size: 20px;
-    }
-
-    .modal-header p {
-        font-size: 12px;
-    }
-
-    .modal-body label {
-        font-size: 12px;
-    }
-
-    .modal-body input {
-        padding: 8px;
-    }
-
-    #continue-button {
-        padding: 8px;
     }
 
     main h1 {
@@ -170,24 +147,19 @@ footer .button:hover {
         font-size: 12px;
     }
 
-    main label {
-        font-size: 12px;
-    }
-
-    main input {
-        padding: 8px;
-    }
-
     .button {
         padding: 8px;
     }
 
-    footer .button {
+    footer a {
         padding: 8px;
     }
 
-    .discord-image {
-        width: 80px;
-        margin-bottom: 15px;
+    header img {
+        width: 80%;
+    }
+
+    #discord-image {
+        width: 80%;
     }
 }

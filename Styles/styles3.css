@@ -11,6 +11,10 @@ body, html {
     background-color: #f0f0f0;
 }
 
+.hidden {
+    display: none;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
@@ -19,14 +23,14 @@ body, html {
     height: 100%;
     width: 100%;
     background-color: white;
-    padding: 10px; /* Adjusted padding */
+    padding: 20px;
 }
 
 .content-wrapper {
-    width: 35%;
-    height: 80%; /* Adjusted height */
+    width: 90%;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 15px; /* Adjusted padding */
+    padding: 20px;
     border: 1px solid #ddd;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: white;
@@ -37,17 +41,18 @@ body, html {
 
 header {
     text-align: center;
-    margin-bottom: 10px; /* Adjusted margin */
+    margin-bottom: 20px;
 }
 
 header img {
-    width: 150px;
+    width: 50%;
+    max-width: 150px;
 }
 
 .stepper {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px; /* Adjusted margin */
+    margin-bottom: 10px;
     list-style: none;
     padding: 0;
 }
@@ -59,8 +64,7 @@ header img {
     border-radius: 5px;
 }
 
-.stepper .step.active,
-.stepper .step.completed {
+.stepper .step.active {
     background-color: #007bff;
     color: white;
 }
@@ -68,57 +72,58 @@ header img {
 main {
     text-align: center;
     width: 100%;
-    margin-top: -10px; /* Adjusted margin */
 }
 
 main h1 {
-    font-size: 28px; /* Adjusted font size */
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
 main p {
     color: #777;
-    font-size: 16px; /* Adjusted font size */
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
 .bot-info {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 10px; /* Adjusted margin */
+    gap: 10px;
 }
 
 .bot-info img {
-    width: 100px; /* Adjusted size */
-    height: 100px; /* Adjusted size */
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    margin-right: 10px; /* Adjusted margin */
 }
 
 .bot-details {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bot-details h2 {
-    font-size: 20px; /* Adjusted font size */
-    margin: 0;
+    margin: 5px 0;
+    font-size: 20px;
 }
 
 .bot-details p {
-    font-size: 14px; /* Adjusted font size */
+    margin: 0;
     color: #777;
+    font-size: 14px;
 }
 
 .button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 8px 16px; /* Adjusted padding */
-    margin-top: 10px;
+    padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    font-size: 14px; /* Adjusted font size */
+    margin-top: 10px;
 }
 
 .button:hover {
@@ -132,31 +137,16 @@ footer {
     margin-top: 20px;
 }
 
-.go-back-button {
-    background-color: #007bff;
+footer a {
     color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    cursor: pointer;
     text-decoration: none;
-}
-
-.go-back-button:hover {
-    background-color: #0056b3;
-}
-
-.tutorial-button {
     background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.tutorial-button:hover {
+footer a:hover {
     background-color: #0056b3;
 }
 
@@ -175,15 +165,28 @@ footer {
         font-size: 12px;
     }
 
-    .bot-info {
-        flex-direction: column;
+    .bot-info img {
+        width: 30px;
+        height: 30px;
     }
 
-    .bot-info img {
-        margin-bottom: 10px;
+    .bot-details h2 {
+        font-size: 18px;
+    }
+
+    .bot-details p {
+        font-size: 12px;
     }
 
     .button {
         padding: 8px;
+    }
+
+    footer a {
+        padding: 8px;
+    }
+
+    header img {
+        width: 80%;
     }
 }

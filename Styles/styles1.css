@@ -6,7 +6,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-color: #f0f0f0;
 }
@@ -110,8 +110,8 @@ footer a:hover {
 }
 
 .content-wrapper {
-    width: 35%;
-    height: 90%;
+    width: 90%;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -128,13 +128,14 @@ header {
 }
 
 header img {
-    width: 150px;
+    width: 50%;
+    max-width: 150px;
 }
 
 .stepper {
     display: flex;
     justify-content: center;
-    margin-bottom: 10px; /* Adjusted margin */
+    margin-bottom: 10px;
     list-style: none;
     padding: 0;
 }
@@ -245,5 +246,9 @@ main input {
 
     #start-button {
         padding: 8px;
+    }
+
+    header img {
+        width: 80%;
     }
 }

@@ -11,6 +11,10 @@ body, html {
     background-color: #f0f0f0;
 }
 
+.hidden {
+    display: none;
+}
+
 .main-content {
     display: flex;
     flex-direction: column;
@@ -23,8 +27,8 @@ body, html {
 }
 
 .content-wrapper {
-    width: 35%;
-    height: auto;
+    width: 90%;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
@@ -33,7 +37,6 @@ body, html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: center;
 }
 
 header {
@@ -42,13 +45,14 @@ header {
 }
 
 header img {
-    width: 150px;
+    width: 50%;
+    max-width: 150px;
 }
 
 .stepper {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     list-style: none;
     padding: 0;
 }
@@ -65,58 +69,28 @@ header img {
     color: white;
 }
 
-.stepper .step.completed {
-    background-color: #007bff;
-    color: white;
+main {
+    text-align: center;
+    width: 100%;
 }
 
 main h1 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 main p {
     color: #777;
     font-size: 14px;
-    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .button {
     background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.button:hover {
-    background-color: #0056b3;
-}
-
-@media (max-width: 600px) {
-    .content-wrapper {
-        width: 95%;
-        height: auto;
-        padding: 10px;
-    }
-
-    header img {
-        width: 120px;
-    }
-
-    main h1 {
-        font-size: 20px;
-    }
-
-    main p {
-        font-size: 12px;
-    }
-
-    .button {
-        padding: 8px 16px;
-    }
-}
+    color:

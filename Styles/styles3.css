@@ -1,0 +1,95 @@
+/* styles3.css */
+
+.button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+footer a {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer a:hover {
+    background-color: #0056b3;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.content-wrapper {
+    width: 35%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    text-align: center;
+}
+
+header img {
+    width: 150px;
+}
+
+.stepper {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+}
+
+.stepper .step {
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.stepper .step.active {
+    background-color: #007bff;
+    color: white;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+@media (max-width: 600px) {
+    .content-wrapper {
+        width: 95%;
+    }
+}
